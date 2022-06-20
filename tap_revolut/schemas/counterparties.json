@@ -1,0 +1,41 @@
+{
+    "type": ["null", "object"],
+    "properties": {
+        "id": {"type": ["null", "string"]},
+        "name": {"type": ["null", "string"]},
+        "phone": {"type": ["null", "string"]},
+        "profile_type": {"type": ["null", "string"]},
+        "country": {"type": ["null", "string"]},
+        "state": {"type": ["null", "string"]},
+        "created_at": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "updated_at": {
+            "type": ["null", "string"],
+            "format": "date-time"
+        },
+        "accounts":  {
+            "type": ["null", "array"],
+            "items": {
+               "type": ["null", "object"],
+               "properties": {
+                   "id": {"type": ["null", "string"]},
+                   "name": {"type": ["null", "string"]},
+                   "bank_country": {"type": ["null", "string"]},
+                   "currency": {"type": ["null", "string"]},
+                   "type": {"type": ["null", "string"]},
+                   "account_no": {"type": ["null", "string"]},
+                   "iban": {"type": ["null", "string"]},
+                   "sort_code": {"type": ["null", "string"]},
+                   "routing_number": {"type": ["null", "string"]},
+                   "bic": {"type": ["null", "string"]},
+                   "clabe": {"type": ["null", "string"]},
+                   "ifsc": {"type": ["null", "string"]},
+                   "bsb_code": {"type": ["null", "string"]},
+                   "recipient_charges": {"type": ["null", "string"]}
+               }
+            }
+        }
+    }
+}

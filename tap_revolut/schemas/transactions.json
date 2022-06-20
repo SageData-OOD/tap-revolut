@@ -1,0 +1,64 @@
+{
+    "type": ["null", "object"],
+    "properties": {
+      "id": {"type": ["null", "string"]},
+      "type": {"type": ["null", "string"]},
+      "request_id": {"type": ["null", "string"]},
+      "state": {"type": ["null", "string"]},
+      "reason_code": {"type": ["null", "string"]},
+      "created_at": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "updated_at": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "completed_at": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "scheduled_for": {
+        "type": ["null", "string"],
+        "format": "date-time"
+      },
+      "related_transaction_id": {"type": ["null", "string"]},
+      "merchant": {
+        "type": ["null", "object"],
+        "properties": {
+          "name": {"type": ["null", "string"]},
+          "city": {"type": ["null", "string"]},
+          "category_code": {"type": ["null", "string"]},
+          "country": {"type": ["null", "string"]}
+        }
+      },
+      "reference": {"type": ["null", "string"]},
+      "legs": {
+        "type": ["null", "array"],
+         "items": {
+           "type": ["null", "object"],
+           "properties": {
+              "leg_id": {"type": ["null", "string"]},
+              "amount": {"type": ["null", "integer"]},
+              "fee": {"type": ["null", "integer"]},
+              "currency": {"type": ["null", "string"]},
+              "bill_amount": {"type": ["null", "integer"]},
+              "bill_currency": {"type": ["null", "string"]},
+              "account_id": {"type": ["null", "string"]},
+              "counterparty": {"type": ["null", "string"]},
+              "description": {"type": ["null", "string"]},
+              "balance": {"type": ["null", "integer"]}
+           }
+         }
+      },
+      "card": {
+        "type": ["null", "object"],
+        "properties": {
+          "card_number": {"type": ["null", "string"]},
+          "first_name": {"type": ["null", "string"]},
+          "last_name": {"type": ["null", "string"]},
+          "phone": {"type": ["null", "string"]}
+        }
+      }
+    }
+}
