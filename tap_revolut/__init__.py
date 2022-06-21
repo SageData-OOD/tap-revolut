@@ -61,7 +61,7 @@ def load_schemas():
 
 def create_metadata_for_report(stream_id, schema, key_properties):
     replication_key = get_bookmark(stream_id)
-    mdata = [{"breadcrumb": [], "metadata": {"inclusion": "available", "forced-replication-method": "FULL_TABLE", "selected": True}}]
+    mdata = [{"breadcrumb": [], "metadata": {"inclusion": "available", "forced-replication-method": "FULL_TABLE"}}]
 
     if key_properties:
         mdata[0]["metadata"]["table-key-properties"] = key_properties
@@ -75,11 +75,11 @@ def create_metadata_for_report(stream_id, schema, key_properties):
         if "object" in schema.properties.get(key).type and schema.properties.get(key).properties:
             inclusion = "available"
             mdata.extend(
-                [{"breadcrumb": ["properties", key, "properties", prop], "metadata": {"inclusion": inclusion, "selected": True}} for prop
+                [{"breadcrumb": ["properties", key, "properties", prop], "metadata": {"inclusion": inclusion}} for prop
                  in schema.properties.get(key).properties])
         else:
             inclusion = "automatic" if key in key_properties + [replication_key] else "available"
-            mdata.append({"breadcrumb": ["properties", key], "metadata": {"inclusion": inclusion, "selected": True}})
+            mdata.append({"breadcrumb": ["properties", key], "metadata": {"inclusion": inclusion}})
 
     return mdata
 
